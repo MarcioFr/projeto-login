@@ -7,10 +7,6 @@
     #F2B035
     #8C4303
     #D95204
-    GRADIENTE
-    #F28D21 - RGB 242, 141, 33 - HSB 31, 86, 95 - CMYK 0, 42, 86, 5 - LAB 68, 31, 67
-    #627176 - RGB 98, 113, 118 - HSB 195, 17, 46 - CMYK 17, 4, 0, 54 - LAB 47, -4, -5
-    #331713 - RGB 51, 23, 19 - HSB 8, 63, 20 - CMYK 0, 55, 63, 80 - LAB 12, 14, 9
 */
 
 * {
@@ -36,7 +32,6 @@ section#login {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
     overflow: hidden;
 
     background-color: white;
@@ -45,6 +40,7 @@ section#login {
     border-radius: 20px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.450);
 
+    transform: translate(-50%, -50%);
     transition: width .4s, height .4s;
     transition-timing-function: ease;
 }
@@ -73,15 +69,39 @@ div#formulario > p {
 
 form > div.campo {
     background-color: #F2B035;
+    border: solid #F2B035;
     display: block;
     width: 100%;
     height: 40px;
-    border-radius: 5px;
+    border-radius: 8px;
     margin: 5px 0px;
 }
 
 div.campo > label {
     display: none;
+}
+
+div.campo > i {
+    color: white;
+    font-size: 2em;
+    width: 40px;
+    padding: 5px;
+}
+
+div.campo > input {
+    background-color: #CFCCD9;
+    font-size: 1em;
+    width: calc(100% - 44.8px);
+    height: 100%;
+    border: 0px;
+    border-radius: 8px;
+    padding: 4px;
+
+    transform: translateY(-12.7px);
+}
+
+div.campo > input:focus-within {
+    background-color: white;
 }
 
 form > input[type=submit] {
@@ -93,7 +113,7 @@ form > input[type=submit] {
     background-color: #627176;
     color: white;
     border: none;
-    border-radius: 5px;
+    border-radius: 8px;
     cursor: pointer;
 }
 
@@ -111,8 +131,8 @@ form > a.botao {
     margin-top: 5px;
     background-color: white;
     color: #627176;
-    border: 1px solid #4d211a;
-    border-radius: 5px;
+    border: 1px solid #F2B035;
+    border-radius: 8px;
     text-decoration: none;
 }
 
